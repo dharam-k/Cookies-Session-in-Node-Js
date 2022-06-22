@@ -1,0 +1,28 @@
+1. install
+npm i express-session
+
+2. import
+import session from 'express-session'
+
+3. initialise
+app.use(session({
+    secret : 'iamkey',         --> session ID cookie (string or array of multi secrets)
+    resave : false,            --> force the session to be saved back to the session store
+    saveUninitialized: true,   --> saveUninitoalized when it is new but not modified
+    cookie : {path: '/', httpOnly: true, secure:false, maxAge:5000}   --> cookie
+}))
+
+name   --> the name of the session ID cookie to set in the response. the default value is 'connect.sid'
+proxy  --> trust the reverse proxy when setting secure cookies
+store  --> the session store instance, defaults to a new memoryStore instance
+
+
+4. store data in session 
+req.session.VariableName       ==> req.session.count =1, req.session.count
+req.session.regenerate()
+req.session.destroy(callback)  
+req.session.reload(callback)  
+req.session.id || req.sessionID
+req.session.cookie 
+cookie.maxAge
+cookie.originMaxAge
