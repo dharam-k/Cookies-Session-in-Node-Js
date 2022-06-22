@@ -1,0 +1,26 @@
+{
+  "name": "cookiesnode",
+  "version": "1.0.0",
+  "description": "implements cookies functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharam-k/Cookies-Session-in-Node-Js.git"
+  },
+  "author": "Dharmendra Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dharam-k/Cookies-Session-in-Node-Js/issues"
+  },
+  "homepage": "https://github.com/dharam-k/Cookies-Session-in-Node-Js#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
