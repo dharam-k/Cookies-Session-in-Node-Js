@@ -1,0 +1,43 @@
+1. install
+npm install cookie-parser
+
+2. import
+var cookieParser = require('cookie-parser')
+
+3. initialise
+app.use(cookieParser())
+
+4. set cookies
+res.cookie(key, value)
+res.cookie(key, {items : [values]})
+res.cookie(key, value, {maxAge:5000}) --> for 5sec then expired
+res.cookie(key, value, {expire: new Date(Date.now()+900000), httpOnly : true/false, secure: true/false, sameSite: true/false})
+
+res.cookie(key, value, {path: '/admin'})
+
+properties :
+
+###################################################
+
+property   |   type
+--------------------------
+domain     |   string
+encode     |   function
+expires    |   Date
+httpOnly   |   boolean
+maxAge     |   Number
+path       |   string
+secure     |   boolean (cookie to be used in https only)
+signed     |   boolean
+sameSite   |   boolean (cross origin not allow)
+
+####################################################
+
+5. get cookies values
+
+req.cookies
+
+6. clear cookies
+
+res.clearCookie(key)
+res.clearCookie(key, {path: '/admin'})
