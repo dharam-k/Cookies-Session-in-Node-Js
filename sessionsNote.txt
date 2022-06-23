@@ -26,3 +26,7 @@ req.session.id || req.sessionID
 req.session.cookie 
 cookie.maxAge
 cookie.originMaxAge
+
+
+5. sessions store in database (mongodb)
+npm i connect-mongo
